@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[hyphens]{url}
+\usepackage{titling}
+\usepackage{varwidth}
+\usepackage{hyperref}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={165mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\title{Research Seminar in Data Science\\Paper Reviews}
+\author{
+  Christoph Schmidl\\ s4226887\\      \texttt{c.schmidl@student.ru.nl}
+}
+\date{\today}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\textbf{Reviewed papers:}
+
+\begin{itemize}
+	\item \textbf{Mastering the game of Go without human knowledge} by David Silver et al. (Presented by Mick an Hulst)
+	\item \textbf{End-to-end learning for music audio} by Sander Dieleman and Benjamin Schrauwen (Presented by Mathis Sackers)
+\end{itemize}
+
+
+\section{Mastering the game of Go without human knowledge}
+
+\subsection{Summary}
+
+In their paper "Mastering the game of Go without human knowledge", David Silver et al represent a reinforcement learning approach which gets combined with A monteCarlo tree search to learning the game of Go without any human/domain knowledge. The algorithm is based on a self-play manner using a reinforcement learning approach and is able to beat the AlphaGo Master after several epochs and a 100-game match with 2h game controls.
+
+\subsection{Evidence}
+
+The paper contains 69 citations of trustworthy sources. They claims are backed up by prior research.
+
+\subsection{Strengths}
+
+The strenghts of this paper is its novelty and the discovery that their algorithm is able to beat a human master in a certain domain although the algorithms has no prior knowledge or human knowledge beforehand. This makes this algorithm valuable because it also would be able to learn any other game based environment where the rules are fixed beforehand.
+
+\subsection{Weaknesses}
+
+To be hoest, I did not find any.
+
+\subsection{Evaluation}
+
+I am sure that this paper would get accepted based on its impact on the AI community in regards to round-based games. The methods and experimentel setup was also explained quite well.
+
+\subsection{Comments on the quality of the writing}
+
+The writing style seems to be professional and suitable for a conference or journal. I did not find any typos and the sentences were formulated on point.
+
+\subsection{Queries for discussion}
+
+\begin{itemize}
+	\item Is this paper state of the art when it comes to round-based games or strategic reasoning?
+	\item How does this algorithm compare to the approach by Tuomas Sandholm and Noam Brown known for "Libratus: The Superman AI for No-Limit Poker"?
+\end{itemize}
+
+\section{End-to-end learning for music audio}
+
+\subsection{Summary}
+
+In the paper "End-to-End Learning For Music Audio" Sander Dieleman and Benjamin Schrauwen concentrate on a novel approach for content-based music information retrieval by using Convolutional Neural Networks with raw audi as input in comparison to the traditional approach which relies on mid-level representations like spectograms. The first approach is representing automatic feature learning while the second approach represent manual feature engineering. Although the CNN approach seem to perform quite well on the tagging task of the Magnatagatune dataset, it does not reach the performance of the spectograms approach.
+
+\subsection{Evidence}
+
+The paper cites 29 different sources which seem trustworthy to me if you consider that there are also known authors in the list like G.E. Hinton and Yann Lecun. The autors give evidence in the mid-level representations part on which methods are mostly used, what is end-to-end learning and how CNNs it into the bigger picture and what preprocessing steps are already known to work. In my personal opinion, there is enough evidence to back up this paper. 
+
+\subsection{Strengths}
+
+The paper is easy to follow and it is written on point. The authors represent the state-of-the-art approach my describing spectograms and compare it to a deep learning approach using raw audio. It is clear how the CNN architecture looks like and nothing seems to be ambigious to me.
+
+
+\subsection{Weaknesses}
+
+The only weakness I spotted in the paper is the network structure of their CNN approach which seems to come out of thin air. They do not give evidence which paper inspired their overall network structure. I assume that this structure is maybe expected to be known in the community?
+
+\subsection{Evaluation}
+
+I would assume that this paper would get accepted to a conference or journal based on its sophisticated writing style and the level of technical detail. Although this paper is rather short and easy to read, the technical detail is sufficient and is novel.
+
+\subsection{Comments on the quality of the writing}
+
+I think that the quality of writing and overall structure is pretty well and the technical detail is also on a high level.
+
+\subsection{Queries for discussion}
+
+\begin{itemize}
+	\item Where does the overall structure of their proposed CNN come from? Is this structure expected to be known? I do not seem to find any evidence/source on which paper the structure is based on.
+	\item Are there any other mid-level representations which could outperform spectograms? Is the mel scale representations state-of-the-art by now?
+	\item The paper is from 2014 and there have been major improvements in the domain of deep learning. Is the spectogram approach still outperforming deep learning approaches? What about LSTM and Recurrent Neural Networks?
+	\item Is the given dataset the standard dataset to use when it comes to audio tagging?
+\end{itemize}
+
+\end{document}
