@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[hyphens]{url}
+\usepackage{titling}
+\usepackage{varwidth}
+\usepackage{hyperref}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={165mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\title{Research Seminar in Data Science\\Paper Reviews}
+\author{
+  Christoph Schmidl\\ s4226887\\      \texttt{c.schmidl@student.ru.nl}
+}
+\date{\today}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\textbf{Reviewed papers:}
+
+\begin{itemize}
+	\item \textbf{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks} by Jun-Yan Zhu et al. (Presented by Joost Besseling)
+	\item \textbf{A Convolutional Neural Network for Modelling Sentences} by Nal Kalchbrenner et al. (Presented by Tristan de Boer)
+\end{itemize}
+
+
+\section{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
+
+\subsection{Summary}
+
+In his paper "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", Jun-Yan Zhu et al propose a method using Generative Adversarial Networks (GANs) in combination with adversarial and cycle consistency loss in order to perform image-to-image translation without the need of paired training data. The authors essentially try to map the distribution of one set of images X to another set of images Y in order to translate a certain style of one set to another. They doing this with the help of GANs where one network generates an input using an image from X and try to transfer it to an image of Y. The same network structure is performed on the other side were another GAN tries to transfer the generated image X to Y back to X without any loss in information. This is called cycle consistency.
+
+\subsection{Evidence}
+
+The authors cite 65 different research papers and describe techniques which were used before and techniques which stay in direct competition to their proposed technique. Their proposed technique is based on GANs and their technique seems to be a solid improvement in the image-to-image translation domain. Their paper is therefore backed up by a sufficient amount of literature. The experiment and evaluation also seems legit. The evaluation is based on human perception by using AMT perceptual studies (Amazon Mechanical Turk) but also on automated techniques like using FCN score. They used a dataset for evaluation which were used before by other researchers and put their findings into perspective to prior research. Nicely done.
+
+\subsection{Strengths}
+
+The paper is written in a clear way and it was easy to follow. The evaluation process made a lot of sense to me because they are using human perception by using AMT perceptual studies (Amazon Mechanical Turk) but also on automated techniques like FCN score to distinguish fake generated images from real images. The proposed technique like combining GANs with the idea of cycle consistency loss seems simple but I personally think it is a rather great idea.
+
+\subsection{Weaknesses}
+
+I think the paper is overall writting really well. One thing that was not really clear to me was if there has to be a similar image mapping between set X and Y. In other words, does this technique work although if there is no matching image from one set to the other? Do the sets have to have one kind of bijective relationship so that it works correctly?
+
+\subsection{Evaluation}
+
+I guess this paper would get accepted to a conference or journal because it adds knowledge on top of already known techniques and proposes a novel approach for the image-to-image translation domain with regards to a lack of a paired image set.
+
+\subsection{Comments on the quality of the writing}
+
+The writing style was formal but also written in a clear way. It is one of those papers which I enjoyed reading and which made a lot of sense to me.
+
+\subsection{Queries for discussion}
+
+\begin{itemize}
+	\item The authors state that the proposed technique does not perform well when it comes to geometrical translations like translating a dog to a cat. Is there a new technique which solved this problem? What would be possible ideas to solve this?
+	\item Can this approach using cycle consistency also be applied to other domains than image generation? Is it already applied to other domains?
+\end{itemize}
+
+
+\section{A Convolutional Neural Network for Modelling Sentences}
+
+\subsection{Summary}
+
+Nal Kalchbrenner et al propose the Dynamic Convolutional Neural Network (DCNN) architecture for semantic modelling of sentences. They are using a Dynamic k-Max Pooling strategy to handle input sentences of different lengths and performed four different experiments in different domains to test their approach.
+
+\subsection{Evidence}
+
+The authors cite 38 different research papers to back up their own and extending already known findings. They state that the problem of semantic modelling has been tackled before by approaches like Neural Bag-of-Words, Recursive Neural Networks, Recurrent Neural Networks and Time-Delay Neural Networks. Their experiments are applied to different domains and later on compared to already known baseline classifiers which seems to be a common approach.
+
+\subsection{Strengths}
+
+The dynamic k-max pooling operation seems to be a novel approach in this domain but I do not have enough experience to put it in perspective to other known approaches in this domain. The kind of experiments were not restricted to a certain domain but was rather broad which makes this solution more attactive to a broader audience spectrum.
+
+
+\subsection{Weaknesses}
+
+The conclusion was rather short and there is no sentence regarding future work or improvements. Furthermore, I thought this paper was hard to read and not really accessible to me.
+
+\subsection{Evaluation}
+
+I do not really know if this paper would get accepted to a conference or a journal because it was hard to read and I do not know if the Dynamic k-max pooling operation in combination with Convolutional Neural Networks is innovative or novel enough. The experiments and evaluation part seems to be broad and detailed enough.
+
+\subsection{Comments on the quality of the writing}
+
+I think that the quality of writing and overall structure is pretty well and the technical detail is also on a high level. On the other hand, I think that this paper is hard to read and I personally did not enjoy reading it.
+
+\subsection{Queries for discussion}
+
+\begin{itemize}
+	\item Is the k-max pooling operation also used in other domains? And if so, what are those domains and in how far does it improve results?
+	\item Are there already better approaches than Dynamic Convolutional Neural Networks with regard to semantic modelling of sentences?
+	\item There is not sentence regarding future work or improvement of the proposed method. In how far could this method be improved though? 
+\end{itemize}
+
+\end{document}
