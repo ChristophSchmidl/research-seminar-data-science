@@ -45,33 +45,32 @@
 
 \subsection{Summary}
 
-In his paper "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", Jun-Yan Zhu et al propose a method using Generative Adversarial Networks (GANs) in combination with adversarial and cycle consistency loss in order to perform image-to-image translation without the need of paired training data. The authors essentially try to map the distribution of one set of images X to another set of images Y in order to translate a certain style of one set to another. They doing this with the help of GANs where one network generates an input using an image from X and try to transfer it to an image of Y. The same network structure is performed on the other side were another GAN tries to transfer the generated image X to Y back to X without any loss in information. This is called cycle consistency.
+In their paper "Human-level control through deep reinforcement learning", Volodymyr Mnih et al combine a deep neural network approach with reinforcement learning called "Deep Q-Network" (DQN) that can learn successful policies directly from high-dimensional sensory inputs. The proposed method was tested on classic Atari 2600 games receiving only pixels and the game score as inputs. By maintaining the same algorithm, architecture and hyperparameters amongst 49 different games, their network was able to beat all previous algorithms and achieve human level performance. Drawbacks of known reinforcement learning techniques have been mitigated by using experience replay and an iterative update procedure that adjusts the action-values towards target values that are only periodically updated. Although their DQN approach is showing good performance on 43 out of the 49 games with any prior knowledge, there are certain games which seem difficult for the proposed algorithm because the chain of actions without any reward seems to be too long to be learned without any prior knowledge.
 
 \subsection{Evidence}
 
-The authors cite 65 different research papers and describe techniques which were used before and techniques which stay in direct competition to their proposed technique. Their proposed technique is based on GANs and their technique seems to be a solid improvement in the image-to-image translation domain. Their paper is therefore backed up by a sufficient amount of literature. The experiment and evaluation also seems legit. The evaluation is based on human perception by using AMT perceptual studies (Amazon Mechanical Turk) but also on automated techniques like using FCN score. They used a dataset for evaluation which were used before by other researchers and put their findings into perspective to prior research. Nicely done.
+The authors cite 30 different research papers and describe techniques which were used before. The reference list also contains classical papers like "Shape and arrangement of columns in cat's striate cortex" by Hubel and Wiesel from 1963. Well known authors like Hinton, LeCun Sutskever and Krizhevsky can also be found. The amount of references and their topics seem to be well picked and forms a strong foundation.
 
 \subsection{Strengths}
 
-The paper is written in a clear way and it was easy to follow. The evaluation process made a lot of sense to me because they are using human perception by using AMT perceptual studies (Amazon Mechanical Turk) but also on automated techniques like FCN score to distinguish fake generated images from real images. The proposed technique like combining GANs with the idea of cycle consistency loss seems simple but I personally think it is a rather great idea.
+The main strenghts of this paper is its novelty of presenting one algorithm, one architecture and one set of hyperparameters in conjunction of two different machine learning techniques in order to learn action-reward based games. Given the fact that the algorithm is able to reach human level performance is also a significant strenghts.
 
 \subsection{Weaknesses}
 
-I think the paper is overall writting really well. One thing that was not really clear to me was if there has to be a similar image mapping between set X and Y. In other words, does this technique work although if there is no matching image from one set to the other? Do the sets have to have one kind of bijective relationship so that it works correctly?
+The main weakness of the paper is the comparison with "human level performance". Human performance can have a very large variance and it is difficult to say when a human player can be considered a "professional gamer" in a certain domain.
 
 \subsection{Evaluation}
 
-I guess this paper would get accepted to a conference or journal because it adds knowledge on top of already known techniques and proposes a novel approach for the image-to-image translation domain with regards to a lack of a paired image set.
+I guess this paper would get accepted to a conference or journal because it is written in a clear way and also contains supplementary material if a reader demands more background knowledge and more technical details. The main reason to accept this paper is its novelty and the main idea behind the DQN architecture.
 
 \subsection{Comments on the quality of the writing}
 
-The writing style was formal but also written in a clear way. It is one of those papers which I enjoyed reading and which made a lot of sense to me.
+The writing style was formal but also written in a clear way. 
 
 \subsection{Queries for discussion}
 
 \begin{itemize}
-	\item The authors state that the proposed technique does not perform well when it comes to geometrical translations like translating a dog to a cat. Is there a new technique which solved this problem? What would be possible ideas to solve this?
-	\item Can this approach using cycle consistency also be applied to other domains than image generation? Is it already applied to other domains?
+	\item How does this algorithm compare to the approach by Tuomas Sandholm and Noam Brown known for "Libratus: The Superman AI for No-Limit Poker"? I would assume that Libratus can also be applied to Atari games because it is action-reward based.
 \end{itemize}
 
 

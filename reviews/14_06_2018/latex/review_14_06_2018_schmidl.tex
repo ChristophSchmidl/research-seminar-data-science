@@ -78,32 +78,32 @@ The writing style was formal but also written in a clear way. I liked the divisi
 
 \subsection{Summary}
 
-Kaiming He et al address the degradation problem by introducing a deep residual learning framework. The degradation problem occurs with increased network depth. When the network starts converging the accuracy gets saturated and then degrades rapidly. In contrast to a plain network architectures like VGG16, a deep residual network is able to maintain a relatively high accuary even when the number of layers varies from 100 to 1000. Kaiming He et Hal hypothesize that it is easier to optimize the residual mapping than to optimize the original, unreferenced mapping. Residual learning is realized by so called "shortcut connections". They evaluate their results based on experiments with the imagenet and cifar-10 datasets which are about image classification and the PASCAL and MS COCO dataaset which are about object detection and object segmentation. Residual networks seem to yield better performance on all datasets when the number of layers start increasing into the hundreds.
+William Chan et al propose a two-component neural network called "Listen, Attend and Spell (LAS)" that can lean to transcribe speech utterances to characters. The authors are using a two-component approach where a so called "listener" is a pyramidal recurrent neural network encoder and a so called "speller" which represents an attention based recurrent neural netword decoder. The novel idea behind this approach is the fact das LAS does not make independence assumptions in the label sequence and it does not rely on hidden markov models. The authors tested their network on three million Google voice search utterances. The state-of-the-art model on this type of dataset was a so called "CLDNN-HMM" system with a word error rate (WER) of 8.0\%. LAS achieves 14.1\% WER without a dictionary or a language model and later on 10.3\% WER with LAS + Sampling + LM Rescoring.
 
 \subsection{Evidence}
 
-The authors cite 49 different research papers to back up their paper. Among the different citations are well knoen researchers like C.M. Bishop, I.J. Goodfellow, G.E. Hinton, Y. LeCun and J. Schmidhuber. Out of these 49 papers, only 3 are also published by K. He himself. The papers seem to be well picked and show the problems of training networks with increased depths and already known solutions on how to tackle these problems. Based on the fact that none of the cited papers includes the name "residual", I assume that this paper is the first one which came up with residual network structures.
+The authors cite 38 different research papers to back up their paper. Among the different citations are well known researchers like Ilya Sutskever, Alex Krizhevsky, Geoffrey Hinton, Juergen Schmidhuber and Andrew Ng. Most of the papers handle the topic of speech recognition using recurrent neural networks and sequence to sequence learning. Without looking any further into the content of the cited papers I assume that the proposed approach is based on a solid foundation.
 
 \subsection{Strengths}
 
-The authors explain in detail what the main problem is when it comes to training very deep neural networks. The degradation effect seems to be of main interest and the residual network structure seems to be a novel approach. In the section about "shortcut connections" the authors also mention that there seems to be a similar approach to their shortcut connection implementation which has been developed during the same time span by Schmidhuber. Schmidhuber's idea is called "highway networks". The authors state out that the main differences between their idea and the one proposed by Schmidhuber. I guess that was done because Schmidhuber is known for claiming credit for ideas which seem similar to his own but differ slightly and is known for confronting researcher publicly during conferences to explain themselves.
+I guess the main strenghts of the paper is its novelty based on the fact that their approach does not use the concepts of phonemes and it does not rely on pronunciation dictionaries or hidden markov models.
 
 \subsection{Weaknesses}
 
-I could not find any real discussion, conclusion or future work section. This made it kind of frustraing for me to read because I wanted to start to follow the main three-step approach of reading research papers. 
+I could not find any weaknesses regarding the content or the writing style of this paper. It requires some prior natural language processing knowledge and knowledge about search algorithms like beam search but I guess that is not really a weakness.
 
 \subsection{Evaluation}
 
-I assume that this paper was accepted for a conference or journal because it offers a novel idea which seems promising. Mainting the same amount of hyperparamters as so called "plain networks" but being able make the network way deeper at the same time and keeping a high accuracy seems to be a very tempting idea to try out. Given the fact that the authors also won different competitons with their approach is another reason why this paper is interesting. Well known datasets like imagenet, cifar-10 and coco have been chosen to validate the approach which makes it easy to reproduce.
+I assume that this paper was accepted for a conference or journal because it offers a novel idea which seems to have potential to beat the state-of-the-art approaches with fine tuning in the future.
 
 \subsection{Comments on the quality of the writing}
 
-The technical detail seems to be sound and it is well written when you overlook the fact that the discussion, conclusion and future work section is missing.
+The technical detail is sufficient and the writing style is concise. Mathematical background was covered sufficiently.
 
 \subsection{Queries for discussion}
 
 \begin{itemize}
-	\item The authors state that they did not use maxout/dropout for their networks with over 1000 layers although they assume that this may improve their results. Has there been further work on this assumption?%
+	\item Towards the end of section 4 "Experiments", the authors state that "convolutional filters could lead to improved results, as they have been reported to improve performance by 5\% relative WER on clean speech and 7\% relative on noisy speech compared to non-convolutional architectures". Did the authors do further investigation on this statement?
 \end{itemize}
 
 \end{document}
