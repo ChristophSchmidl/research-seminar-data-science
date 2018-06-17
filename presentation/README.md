@@ -3,10 +3,16 @@
 Authors:
 
 * Nitish Srivastava
-* Geoffrey Hinton
+* Geoffrey Everest Hinton
+	* the "Godfather of Deep Learning"
 * Alex Krizhevsky
+	* Inventor of AlexNet
 * Ilya Sutskever
+	* Co-founder and Research Director of OpenAI
+	* Former Research Assistant at the Google Brain Team
 * Ruslan Salakhutdinov
+	* He is a professor of computer science at the Carnegie Mellon University
+	* In 2016, he joined Apple as its director of AI research.
 
 ## Outline of the paper:
 
