@@ -1,0 +1,25 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Cohen and Welling}{2016}]{cohen2016group}
+Cohen, T. and Welling, M. (2016).
+\newblock Group equivariant convolutional networks.
+\newblock In {\em International Conference on Machine Learning}, pages
+  2990--2999.
+
+\bibitem[\protect\astroncite{Winkels and Cohen}{2018}]{winkels20183d}
+Winkels, M. and Cohen, T.~S. (2018).
+\newblock 3d g-cnns for pulmonary nodule detection.
+\newblock {\em arXiv preprint arXiv:1804.04656}.
+
+\bibitem[\protect\astroncite{Winkens et~al.}{2018}]{winkens2018improved}
+Winkens, J., Linmans, J., Veeling, B.~S., Cohen, T.~S., and Welling, M. (2018).
+\newblock Improved semantic segmentation for histopathology using rotation
+  equivariant convolutional networks.
+
+\bibitem[\protect\astroncite{Worrall et~al.}{2017}]{worrall2017harmonic}
+Worrall, D.~E., Garbin, S.~J., Turmukhambetov, D., and Brostow, G.~J. (2017).
+\newblock Harmonic networks: Deep translation and rotation equivariance.
+\newblock In {\em Proc. IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, volume~2.
+
+\end{thebibliography}
