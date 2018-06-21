@@ -50,11 +50,44 @@ Equivariant Neural Networks is the short term for Group equivariant Convolutiona
 \subsection{Topics to look up (not part of the review paper template)}
 
 \begin{itemize}
+
+	\item i.i.d. data = Independent and identically distributed random variables
+		\begin{itemize}
+			\item \textit{In probability theory and statistics, a sequence or other collection of random variables is independent and identically distributed (i.i.d. or iid or IID) if each random variable has the same probability distribution as the others and all are mutually independent.}
+		\end{itemize}
+
 	\item Granger causality
+		\begin{itemize}
+			\item Useful info.	
+		\end{itemize}			
+	
+	
 	\item Similar research to causal inference in time series
+		\begin{itemize}
+			\item Useful info.	
+		\end{itemize}			
+	
+	
 	\item Kernel Mean Embedding
+		\begin{itemize}
+			\item Useful info.	
+		\end{itemize}			
+	
+	
+	
 	\item Reproducing Kernel Hilbert Space (RKHS)
+		\begin{itemize}
+			\item Useful info.	
+		\end{itemize}			
+	
+	
+	
 	\item Maximum Mean discrepancy (MMD): See Paper "A kernel method for the two-sample problem"
+		\begin{itemize}
+			\item Useful info.	
+		\end{itemize}			
+	
+	
 	\item Traditional methods for identifying granger causality: Regression models such as vector autoregressive model (VAR) nad the Generalized Additive Model (GAM)
 	\item Kernel Kalman Filter
 	\item Conditional Embedding Operator (KKF-CEO)
@@ -65,29 +98,45 @@ Equivariant Neural Networks is the short term for Group equivariant Convolutiona
 \subsection{Relevance}
 
 
-International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence
+
 
 \begin{enumerate}[label=(\alph*)]
 	\item Is the paper fully withing the scope of the conference?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:}	The "Call for papers"-section on the website of the 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence \url{https://www.ijcai-18.org/cfp/} states that \textit{"IJCAI-ECAI 2018 welcomes submissions across all areas of AI. The conference scope includes all subareas of AI, including (but not limited to) traditional topics such as machine learning, search, planning, knowledge representation, reasoning, constraint satisfaction, natural language processing, robotics and perception, and multiagent systems. We expressly encourage work that cuts across technical areas and/or integrated capabilities. We encourage all types of contributions including theoretical, engineering and applied. We also encourage papers on AI techniques in the context of novel application domains, such as security, sustainability, health care, transportation, and commerce."} Based on this description and the topic of the paper which is about using supervised (machine) learning techniques in order to do causal inference in time series, I would say that this paper fully fits into the scope of the conference.
 		\end{itemize}				
 		
 		
-	\item Will the questionst and results of the paper be of interest to researchers in the field?
+	\item Will the questions and results of the paper be of interest to researchers in the field?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} Given the fact that there does not seem to be a lot of prior research and solutions addressing the same problem of treating causal inference in time series as a classification problem, I would assume that this paper is of high interest.
 		\end{itemize}			
 	
 	
 	\item Did the authors ignore (or appear unaware of) highly relevant prior work?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} The paper "Supervised Estimation of Granger-Based Causality between Time Series" \cite{benozzo2017supervised} seems to be highly relevant but was not cited. The paper "Parametric and non-parametric criteria for causal inference from time-series" \cite{chicharro2014parametric} seems relevant but was not cited.
 		\end{itemize}			
 	
 	\item Is previous work in the area of the paper properly cited?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} Previous work has been briefly mentioned in one sentence in secion "1 - Introduction" by stating that there has been prior work which uses classification to infer causal relationships from i.i.d. data. The mentioned sources are namely:
+			
+			\begin{enumerate}[label=\Roman*]
+				\item A paper called "From dependency to causality: a machine learning approach"  \cite{bontempi2015dependency}. According to google scholar it has been cited only 3 times.
+				\item A Kaggle competition called "Cause-effect pairs" which can be found at \url{https://www.kaggle.com/c/cause-effect-pairs}. Instead of just citing the Kaggle competition, it would be better to cite the published papers or code repositories of the winners of the competition. Otherwise the reader has to browse though the Kaggle forum to find the actual results. The first three winners published their code in the following Github repositories:
+				\begin{itemize}
+					\item Team ProtoML \url{https://github.com/diogo149/CauseEffectPairsChallenge}
+					\item Team jarfo \url{https://github.com/jarfo/cause-effect}
+					\item Team FirfiD \url{https://github.com/ssamot/causality}
+				\end{itemize}
+				
+								\item A paper called "Towards a learning theory of cause-effect inference" \cite{lopez2015towards}. According to google scholar it has been cited 47 times.
+				\item A paper called "Discovering causal signals in images" \cite{lopez2017discovering}. According to google scholar it has been cited 13 times.
+			\end{enumerate}
+			
+			In section "4 - Related Work", it is mentioned that \cite{lopez2015towards} is also using a supervised learning method for i.i.d. data called "Randomized Causation Coefficient (RCC)" which is using kernel mean embedding to obtain features. One sentence is dedicated to describe the difference between the work of \cite{lopez2015towards} and the proposed approach. Previous work has been cited properly but is sparse. In my opinion the citation to the Kaggle competition needs improvement in terms of adding details to the winning solutions.
+			
 		\end{itemize}		
 \end{enumerate}
 
@@ -97,7 +146,7 @@ International Joint Conference on Artificial Intelligence and the 23rd European 
 \begin{enumerate}[label=(\alph*)]
 	\item Is this a significant advance in the state of the art?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} I would say it is not a significant advance. I also miss the statement of beating state-of-the-art approaches in the conclusion.
 		\end{itemize}			
 	
 	\item Is this a paper that people are likely to read and cite?
@@ -227,13 +276,13 @@ International Joint Conference on Artificial Intelligence and the 23rd European 
 \begin{enumerate}[label=(\alph*)]
 	\item Does the paper situate the work with respect to the state of the art?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} Given that \cite{lopez2015towards} is the state-of-the-art, the paper situates the work with respect to the before mentioned paper in a sufficient way. The experiments were chosen in a direct comparison towards Randomized Causation Coefficient.
 		\end{itemize}			
 	
 	
 	\item Are relevant papers cited, discussed, and compared to the presented work?
 		\begin{itemize}
-			\item \textbf{Answer:}	
+			\item \textbf{Answer:} Same remark as above although I would question the statement that \cite{lopez2015towards} is the only work which can be used as a direct comparison in the experiments. Furthermore, the related work section seems to be a bit sparse to me. I expected more explicit statements in how far this paper is novel to the other approach. At its core, is there just a difference in the chosen features?
 		\end{itemize}			
 	
 \end{enumerate}

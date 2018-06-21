@@ -1,0 +1,34 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Benozzo et~al.}{2017}]{benozzo2017supervised}
+Benozzo, D., Olivetti, E., and Avesani, P. (2017).
+\newblock Supervised estimation of granger-based causality between time series.
+\newblock {\em Frontiers in neuroinformatics}, 11.
+
+\bibitem[\protect\astroncite{Bontempi and
+  Flauder}{2015}]{bontempi2015dependency}
+Bontempi, G. and Flauder, M. (2015).
+\newblock From dependency to causality: a machine learning approach.
+\newblock {\em The Journal of Machine Learning Research}, 16(1):2437--2457.
+
+\bibitem[\protect\astroncite{Chicharro}{2014}]{chicharro2014parametric}
+Chicharro, D. (2014).
+\newblock Parametric and non-parametric criteria for causal inference from
+  time-series.
+\newblock In {\em Directed Information Measures in Neuroscience}, pages
+  195--219. Springer.
+
+\bibitem[\protect\astroncite{Lopez-Paz et~al.}{2015}]{lopez2015towards}
+Lopez-Paz, D., Muandet, K., Sch{\"o}lkopf, B., and Tolstikhin, I. (2015).
+\newblock Towards a learning theory of cause-effect inference.
+\newblock In {\em International Conference on Machine Learning}, pages
+  1452--1461.
+
+\bibitem[\protect\astroncite{Lopez-Paz et~al.}{2017}]{lopez2017discovering}
+Lopez-Paz, D., Nishihara, R., Chintala, S., Sch{\"o}lkopf, B., and Bottou, L.
+  (2017).
+\newblock Discovering causal signals in images.
+\newblock In {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR 2017)}.
+
+\end{thebibliography}
