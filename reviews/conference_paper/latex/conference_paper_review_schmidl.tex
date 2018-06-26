@@ -41,291 +41,69 @@
 
 \section{Causal Inference in Time Series via Supervised Learning}
 
-\subsection{Summary (not part of the review paper template)}
-
-
-
-\subsection{Topics to look up (not part of the review paper template)}
-
-\begin{itemize}
-
-	\item i.i.d. data = Independent and identically distributed random variables
-		\begin{itemize}
-			\item \textit{In probability theory and statistics, a sequence or other collection of random variables is independent and identically distributed (i.i.d. or iid or IID) if each random variable has the same probability distribution as the others and all are mutually independent.}
-		\end{itemize}
-
-	\item Granger causality
-		\begin{itemize}
-			\item Useful info.	
-		\end{itemize}			
-	
-	
-	\item Similar research to causal inference in time series
-		\begin{itemize}
-			\item Useful info.	
-		\end{itemize}			
-	
-	
-	\item Kernel Mean Embedding
-		\begin{itemize}
-			\item Useful info.	
-		\end{itemize}			
-	
-	
-	
-	\item Reproducing Kernel Hilbert Space (RKHS)
-		\begin{itemize}
-			\item Useful info.	
-		\end{itemize}			
-	
-	
-	
-	\item Maximum Mean discrepancy (MMD): See Paper "A kernel method for the two-sample problem"
-		\begin{itemize}
-			\item Useful info.	
-		\end{itemize}			
-	
-	
-	\item Traditional methods for identifying granger causality: Regression models such as vector autoregressive model (VAR) nad the Generalized Additive Model (GAM)
-	\item Kernel Kalman Filter
-	\item Conditional Embedding Operator (KKF-CEO)
-\end{itemize}
-
-
-
-\subsection{Relevance}
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.2}% for the vertical padding
+\begin{table}[h]
+\centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Criteria} & \textbf{Score} \\ \hline
+    Relevance & ~~ 6\\ \hline
+    Significance & ~~ 7\\ \hline
+    Originality & ~~ 6\\ \hline
+    Technical Quality & ~~ 7\\ \hline
+    Clarity and quality of writing & ~~ 7\\ \hline
+    Scholarship & ~~ 7\\ \hline
+     & \\ \hline
+    Overall Score & ~~ 6 \\ \hline
+    Confidence on your assessment & ~~ 4 \\ \hline
+    \end{tabular}
+\end{table}
 
 
 
 
-\begin{enumerate}[label=(\alph*)]
-	\item Is the paper fully withing the scope of the conference?
-		\begin{itemize}
-			\item \textbf{Answer:}	The "Call for papers"-section on the website of the 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence \url{https://www.ijcai-18.org/cfp/} states that \textit{"IJCAI-ECAI 2018 welcomes submissions across all areas of AI. The conference scope includes all subareas of AI, including (but not limited to) traditional topics such as machine learning, search, planning, knowledge representation, reasoning, constraint satisfaction, natural language processing, robotics and perception, and multiagent systems. We expressly encourage work that cuts across technical areas and/or integrated capabilities. We encourage all types of contributions including theoretical, engineering and applied. We also encourage papers on AI techniques in the context of novel application domains, such as security, sustainability, health care, transportation, and commerce."} Based on this description and the topic of the paper which is about using supervised (machine) learning techniques in order to do causal inference in time series, I would say that this paper fully fits into the scope of the conference.
-		\end{itemize}				
-		
-		
-	\item Will the questions and results of the paper be of interest to researchers in the field?
-		\begin{itemize}
-			\item \textbf{Answer:} Given the fact that there does not seem to be a lot of prior research and solutions addressing the same problem of treating causal inference in time series as a classification problem, I would assume that this paper is of high interest.
-		\end{itemize}			
-	
-	
-	\item Did the authors ignore (or appear unaware of) highly relevant prior work?
-		\begin{itemize}
-			\item \textbf{Answer:} The paper "Supervised Estimation of Granger-Based Causality between Time Series" \cite{benozzo2017supervised} seems to be highly relevant but was not cited. The paper "Parametric and non-parametric criteria for causal inference from time-series" \cite{chicharro2014parametric} seems relevant but was not cited.
-		\end{itemize}			
-	
-	\item Is previous work in the area of the paper properly cited?
-		\begin{itemize}
-			\item \textbf{Answer:} Previous work has been briefly mentioned in one sentence in secion "1 - Introduction" by stating that there has been prior work which uses classification to infer causal relationships from i.i.d. data. The mentioned sources are namely:
-			
-			\begin{enumerate}[label=\Roman*]
-				\item A paper called "From dependency to causality: a machine learning approach"  \cite{bontempi2015dependency}. According to google scholar it has been cited only 3 times.
-				\item A Kaggle competition called "Cause-effect pairs" which can be found at \url{https://www.kaggle.com/c/cause-effect-pairs}. Instead of just citing the Kaggle competition, it would be better to cite the published papers or code repositories of the winners of the competition. Otherwise the reader has to browse though the Kaggle forum to find the actual results. The first three winners published their code in the following Github repositories:
-				\begin{itemize}
-					\item Team ProtoML \url{https://github.com/diogo149/CauseEffectPairsChallenge}
-					\item Team jarfo \url{https://github.com/jarfo/cause-effect}
-					\item Team FirfiD \url{https://github.com/ssamot/causality}
-				\end{itemize}
-				
-								\item A paper called "Towards a learning theory of cause-effect inference" \cite{lopez2015towards}. According to google scholar it has been cited 47 times.
-				\item A paper called "Discovering causal signals in images" \cite{lopez2017discovering}. According to google scholar it has been cited 13 times.
-			\end{enumerate}
-			
-			In section "4 - Related Work", it is mentioned that \cite{lopez2015towards} is also using a supervised learning method for i.i.d. data called "Randomized Causation Coefficient (RCC)" which is using kernel mean embedding to obtain features. One sentence is dedicated to describe the difference between the work of \cite{lopez2015towards} and the proposed approach. Previous work has been cited properly but is sparse. In my opinion the citation to the Kaggle competition needs improvement in terms of adding details to the winning solutions.
-			
-		\end{itemize}		
-\end{enumerate}
 
-
-\subsection{Significance}
-
-\begin{enumerate}[label=(\alph*)]
-	\item Is this a significant advance in the state of the art?
-		\begin{itemize}
-			\item \textbf{Answer:} I would say it is not a significant advance. I also miss the statement that this approach would beat the state-of-the-art approach in the conclusion.
-		\end{itemize}			
-	
-	\item Is this a paper that people are likely to read and cite?
-		\begin{itemize}
-			\item \textbf{Answer:} Because this paper is addressing a very specific topic where not alot of prior research has been done, I would assume that people are likely to read and cite this paper. 
-		\end{itemize}			
-	
-	\item Does the paper address an important problem?
-		\begin{itemize}
-			\item \textbf{Answer:} I would assume that this paper addresses a problem which is not important to most researchers in the machine learning and artificial intelligence domain.
-		\end{itemize}			
-	
-	\item Does it open new research directions?
-		\begin{itemize}
-			\item \textbf{Answer:} Yes, it would be interesting to see how other classifiers perform on the presented features.
-		\end{itemize}			
-	
-	\item Is it a paper that is likely to have a lasting impact?
-		\begin{itemize}
-			\item \textbf{Answer:} Given that the last paper which seems to cover the same research domain is already three years old I would assume that this paper has a lasting impact.
-		\end{itemize}		
-\end{enumerate}
-
-\subsection{Originality}
-
-\begin{itemize}
-	\item Reviewers should recognise and reward papers that propose genuinely new ideas. As a reviewer you should try to assess whether the ideas are truly new. Novel combinations, adaptations or extensions of existing ideas are also valuable.
-	\begin{itemize}
-		\item \textbf{Answer:} The only thing which seems to make this paper different from the work of \cite{lopez2015towards} is the feauture engineering part although this part seems to be sophisticated.
-	\end{itemize}
-\end{itemize}
-
-
-\subsection{Technical Quality}
-
-\begin{enumerate}[label=(\alph*)]
-	\item Are the results technically sound?
-		\begin{itemize}
-			\item \textbf{Answer:} I am not an expert in this domain so it is hard to tell. The results seem to be technically correct.
-		\end{itemize}			
-	
-	
-	\item Are there obvious flaws in the conceptual approach?
-		\begin{itemize}
-			\item \textbf{Answer:} I could not find flaws regarding the conceptual approach.
-		\end{itemize}		
-	
-	
-	\item Are claims well-supported by theoretical analysis or experimental results?
-		\begin{itemize}
-			\item \textbf{Answer:} Yes.
-		\end{itemize}		
-	
-	\item Are the experiments well thought out and convincing?
-		\begin{itemize}
-			\item \textbf{Answer:} The synthetic time series (linear and nonlinear) seem to be a good choice for the experiment and seem to be convincing.
-		\end{itemize}		
-	
-	
-	\item Will it be possible for other researchers to replicate these results?
-		\begin{itemize}
-			\item \textbf{Answer:} The technical detail should be sufficient to replicate the results.
-		\end{itemize}		
-	
-	
-	\item Is the evaluation appropriate?
-		\begin{itemize}
-			\item \textbf{Answer:} The evaluation is based on comparing the proposed method with the state-of-the-art approach "RCC" and granger causality methods, namely the Vector Autoregressive Model, Generative Additive model and the kernel regression. The macro and micro-averaged F1-score is used as the evaluation metric. The evaluation seems appropriate.
-		\end{itemize}		
-	
-	
-	\item Did the authors clearly assess both the strenghts and weaknesses of their approach?
-		\begin{itemize}
-			\item \textbf{Answer:} The authors state that their approach also works with n-variate time series where n $>$ 3 but in reality it is restricted to trivariate time series. This is a bit misleading. Besides that, I could not find any further notes about the weaknesses of the approach.
-		\end{itemize}		
-	
-\end{enumerate}
-
-\subsection{Clarity and quality of writing}
-
-\begin{enumerate}[label=(\alph*)]
-	\item Is the paper clearly written?
-		\begin{itemize}
-			\item \textbf{Answer:} Yes.
-		\end{itemize}			
-	
-	
-	\item Is there a good use of examples and figures?
-		\begin{itemize}
-			\item \textbf{Answer:} Yes, the usage of examples and figures seems sufficient to me.
-		\end{itemize}			
-	
-	\item Is it well organized?
-		\begin{itemize}
-			\item \textbf{Answer:} The overall structure seems fine to me although I am missing a separated discussion section. I am not sure if the overall structure has been dictated by the conference.
-		\end{itemize}			
-	
-	
-	\item Are there problems with style and grammar?
-		\begin{itemize}
-			\item \textbf{Answer:} I could not find any style or grammar mistakes.
-		\end{itemize}			
-	
-	
-	\item Are these issues with typos, formatting, references, etc.?
-		\begin{itemize}
-			\item \textbf{Answer:} The only issue with regards to references has already been described in section "Relevance", point d) when it comes to referencing a Kaggle competition website.
-		\end{itemize}			
-		
-	
-	
-	
-\end{enumerate}
-
-\subsection{Scholarship}
-
-\begin{enumerate}[label=(\alph*)]
-	\item Does the paper situate the work with respect to the state of the art?
-		\begin{itemize}
-			\item \textbf{Answer:} Given that \cite{lopez2015towards} is the state-of-the-art, the paper situates the work with respect to the before mentioned paper in a sufficient way. The experiments were chosen in a direct comparison towards Randomized Causation Coefficient.
-		\end{itemize}			
-	
-	
-	\item Are relevant papers cited, discussed, and compared to the presented work?
-		\begin{itemize}
-			\item \textbf{Answer:} Same remark as above although I would question the statement that \cite{lopez2015towards} is the only work which can be used as a direct comparison in the experiments. Furthermore, the related work section seems to be a bit sparse to me. I expected more explicit statements in how far this paper is novel to the other approach. At its core, is there just a difference in the chosen features?
-		\end{itemize}			
-	
-\end{enumerate}
-
-\subsection{Overall Score}
-
-\begin{itemize}
-	\item 10 - This is best-paper material
-	\item 9 - An excellent paper, a very strong accept
-	\item 8 - A very good paper, a strong accept
-	\item 7 - A good paper, accept
-	\item \textbf{6 - A good paper overall. I vote for acceptance, although would not be upset if it were rejected because of the low acceptance rate}
-	\item 5 - Decent paper, but may be below the IJCAI threshold. I tend to vote for rejecting it, although would not be upset if it were accepted.
-	\item 4 - I vote for rejecting it, but could be persuaded otherwise.
-	\item 3 - A weak paper, just not good enough.
-	\item 2 - A clear rejection. I vote and argue for rejection. Clearly below the standards of the conference.
-	\item 1 - A very strong rejection. I will actively fight for rejection.
-\end{itemize}
-
-\subsection{Confidence on your assessment}
-
-\begin{itemize}
-	\item 10 - My own current research is on the topic of the paper
-	\item 9 - I have undertaken research on the topic of the paper
-	\item 8 - I am an expert in this area
-	\item 7 - I have up-to-date knowledge in the area
-	\item 6 - I don't have complete knowledge of the area, but can assess the value of the work
-	\item 5 - I have a general understanding of the area
-	\item \textbf{4 - My assessment is an informed guess}
-	\item 3 - My knowledge in the area is limited
-	\item 2 - My knowledge in the area is very limited
-	\item 1 - My assessment can be wrong
-\end{itemize}
-
-\section{Main Review}
+\subsection{Main Review}
 
 \subsection{Comments to Authors. (free text)}
 
-\begin{itemize}
-	\item Main body of the review. Make sure you substantiate all the scores for the different criteria above, and refer to the descriptions given.
-	\item Give informative content
-	\item Be constructive
-	\item Write your comments in the same way you would like to receive comments on your own papers.
-	\item Include page/line numbers when referring to specific parts.
-	\item Add a separate "minor details" section for e.g. (con)textual and/or typographical issues.
-\end{itemize}
+\textbf{Relevance}:\\
+
+The paper fully fits into the scope of the conference. Although the paper might only spark the interest of a minor part of the researchers based on the very specific topic that it addresses, the presented results in itself are interesting. Based on its topic specificity and the number of conference submissions, this paper may not get accepted. Previous relevant work has been cited properly and the amount of citations is solid. One suggestion would be to also look into the paper "Supervised Estimation of Granger-Based Causality between Time Series" by Benozzo et al. (2017) because it addresses a similar topic, although this is purely optional.\\
+
+\noindent \textbf{Significance}:\\
+
+The state-of-the-art approach "Towards a learning theory of cause-effect inference" by Lopez-Paz et al. (2015) has been chosen as the  baseline for later comparison. This makes sense because this approach is also using a supervised learning method for i.i.d. data called "Randomized Causation Coefficient (RCC)" which is using kernel mean embeddings to obtain features. The proposed method is beating the state-of-the-art results which makes this paper likely to get read and cited. Given that this paper represents the "new" state-of-the-art approach, it would be likely to have a lasting impact. The paper adresses a very specific problem and is therefore not important for most researchers at the conference. The paper opens new research directions, e.g., in terms of performance differences of other classification models besides random forest operating on the proposed feature vectors.\\
+
+\newpage
+
+\noindent \textbf{Originality}:\\
+
+The combination of different feature engineering steps (using kernel mean embeddings to map distributions into a reproducing kernel hilbert space, applying maximum mean discrepancy as a distance measure in that space and later on using random fourier features) makes this paper distinct and novel from the work of Lopez-Paz et al. (2015), although I do not know if this approach is novel in general.\\
+
+\noindent \textbf{Technical Quality}:\\
+
+I could not find any obvious flaws in the conceptual approach. The claims are well-supported by experimental results and are convincing. The evaluation is based on comparing the proposed method with the state-of-the-art approach "RCC" by Lopez-Paz et al. (2015) and granger causality methods, namely the Vector Autoregressive Model, Generative Additive model and the kernel regression. The macro and micro-averaged F1-score is used as the evaluation metric. The evaluation is appropriate. The authors also show that their approach works with n-variate time series where n $>$ 3 although it seems to be rather restricted to trivariate time series. This is not a technical error, I just hoped the proposed method would work equally well with n-variate time series where n $>$ 3.\\
+
+
+\noindent \textbf{Clarity and quality of writing}:\\
+
+The paper is well organized and cleary written. The use of examples and figures is sufficient. I could not find any mistakes with regards to style, grammar, formatting or typos.\\
+
+\noindent \textbf{Scholarship}:\\
+
+The paper situates the state-of-the-art approach of Lopez-Paz et al.(2015) in a good way. Relevant papers were cited and well-known models were chosen for further comparison besides the Randomized Causation Coefficient (RCC). The experiments were chosen in a direct comparison towards RCC but also to traditional granger causality models like VAR, GAM, KER and to transfer entropy (TE).
+
 
 
 \subsection{Confidential Comments (Not visible to the authors, only to other reviewers/program char)}
 
-if applicable
 
 
-\bibliographystyle{apa}
-\bibliography{literature} 
+
+
+
 
 
 \end{document}
